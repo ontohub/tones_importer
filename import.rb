@@ -17,6 +17,7 @@ browser.links_with(text: "RDF/XML").each do |link|
   ontology = params["ontology"][0]
   host     = URI.parse(ontology).host || "local"
   basename = File.basename(ontology)
+  basename << '.rdf' unless basename.include?(".")
   
   print "downloading #{href} ..."
   content  = agent.get(href).body
