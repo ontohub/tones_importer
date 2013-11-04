@@ -5,11 +5,12 @@ require 'rubygems'
 require 'bundler/setup'
 require 'mechanize'
 
+URL       = 'http://rpc295.cs.man.ac.uk:8080/repository/browser'
 BASEDIR   = Pathname.new(File.dirname(__FILE__))
 WORKSPACE = BASEDIR.join("workspace")
 
 agent   = Mechanize.new
-browser = agent.get 'http://rpc295.cs.man.ac.uk:8080/repository/browser'
+browser = agent.get URL
 
 browser.links_with(text: "RDF/XML").each do |link|
   href     = link.href
