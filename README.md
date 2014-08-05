@@ -6,7 +6,7 @@ Some code to download all ontologies listed at the [TONES Ontology Repository](h
 Requirements
 ------------
 
-You need Ruby 2.0 and the Debian/Ubuntu packages libxslt-dev libxml2-dev (required by Nokogiri).
+You need Ruby 2.1.
 
 
 Installation
